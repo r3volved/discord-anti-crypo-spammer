@@ -46,7 +46,7 @@ let selfid = null
 client.once(Events.ClientReady, c => {
     selfid = c.user.id
 	console.log(`Ready! Logged in as ${c.user.tag} (${c.user.id})`)
-	console.log(`Invite:`, `https://discord.com/api/oauth2/authorize?client_id=557575678791254017&permissions=1099511639046&scope=bot`)
+	console.log(`Invite:`, `https://discord.com/api/oauth2/authorize?client_id=${c.user.id}&permissions=1099511639046&scope=bot`)
     console.log(`Member of ${c.guilds.cache.size} guild(s):`)
     c.guilds.cache.forEach(guild => console.log('-', guild.id, guild.name))
     console.log(`On guard...`)
